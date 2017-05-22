@@ -54,11 +54,11 @@ String secret = "";
         
             
         try {
-           List<Discipline> details = Client.disciplines().getDisciplines();
+           List<Tournament> details = Client.tournaments().getAllTournaments();
            
-           Iterator<Discipline> iterator = details.iterator();
+           Iterator<Tournament> iterator = details.iterator();
 	while (iterator.hasNext()) {
-		System.out.println(iterator.next());
+		System.out.println(iterator.next().getName());
 	}
         } catch (Exception e) {
             System.out.println(e.getCause());
